@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="449.0" prefWidth="640.0" spacing="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.emit.PrimaryController">
+   <children>
+      <AnchorPane prefHeight="429.0" prefWidth="595.0">
+         <children>
+            <TextField fx:id="name" layoutX="239.0" layoutY="108.0" prefHeight="24.0" prefWidth="195.0" promptText="Name" />
+            <TextField fx:id="receipt" layoutX="239.0" layoutY="154.0" prefHeight="24.0" prefWidth="195.0" promptText="Receipt Number" />
+            <Button fx:id="emit" layoutX="261.0" layoutY="381.0" mnemonicParsing="false" onAction="#writeToCSV" text="emit!">
+               <font>
+                  <Font name="Ubuntu Mono Bold" size="17.0" />
+               </font>
+            </Button>
+            <Text layoutX="251.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="emit" textAlignment="CENTER" wrappingWidth="85.205078125">
+               <font>
+                  <Font name="Ubuntu Mono" size="27.0" />
+               </font>
+            </Text>
+            <ChoiceBox fx:id="roomNumber" layoutX="239.0" layoutY="296.0" prefHeight="24.0" prefWidth="195.0" />
+            <Label layoutX="50.0" layoutY="66.0" text="Date:" />
+            <Label layoutX="50.0" layoutY="112.0" text="Name:" />
+            <Label layoutX="50.0" layoutY="158.0" text="Receipt Number:" />
+            <Label layoutX="50.0" layoutY="205.0" text="Room Type:" />
+            <Label layoutX="50.0" layoutY="253.0" text="Number of Nights:" />
+            <Label layoutX="50.0" layoutY="300.0" text="Room Number" />
+            <ChoiceBox fx:id="roomType" layoutX="239.0" layoutY="201.0" prefHeight="24.0" prefWidth="195.0" />
+            <Line endX="6.0" endY="277.0" layoutX="197.0" layoutY="66.0" startX="6.0" startY="-20.0" strokeWidth="0.5" />
+            <DatePicker fx:id="date" layoutX="239.0" layoutY="62.0" prefHeight="24.0" prefWidth="195.0" promptText="Date" />
+            <Label fx:id="dateLabel" layoutX="463.0" layoutY="66.0" text="Field Required" textFill="RED" />
+            <Label fx:id="nameLabel" layoutX="463.0" layoutY="112.0" text="Field Required" textFill="RED" />
+            <Label fx:id="receiptLabel" layoutX="463.0" layoutY="158.0" text="Field Required" textFill="RED" />
+            <Label fx:id="roomTypeLabel" layoutX="463.0" layoutY="205.0" text="Field Required" textFill="RED" />
+            <Label fx:id="numNightsLabel" layoutX="463.0" layoutY="253.0" text="Field Required" textFill="#f20606" />
+            <Label fx:id="roomNumberLabel" layoutX="463.0" layoutY="300.0" text="Field Required" textFill="RED" />
+            <Label fx:id="emitLabel" layoutX="234.0" layoutY="344.0" text="emit successful!" textFill="#31c624">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nights" layoutX="239.0" layoutY="249.0" prefWidth="195.0" promptText="Number of Nights" />
+         </children>
+      </AnchorPane>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
